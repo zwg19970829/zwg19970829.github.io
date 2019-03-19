@@ -229,6 +229,165 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/19/shell-sort/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kirito">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome to Kirito‘s blog！！">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/19/shell-sort/" itemprop="url">希尔排序</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-19T18:41:14+08:00">
+                2019-03-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>categories:</p>
+<ul>
+<li>数据结构</li>
+<li>算法</li>
+</ul>
+<hr>
+<p>问题引入：</p>
+<pre><code>对于大规模乱序数组插入排序很慢，因为它只会交换相邻的元素，因此元素只能一点一点地从数组的一端移动到另一端。例如：如果主键最小的元素正好在数组的尽头，要将它移动到正确的位置就需要N-1次移动。
+</code></pre><p>希尔排序：</p>
+<pre><code>希尔排序为了加快速度简单的改进了插入排序，交换不相邻的元素以对数组的局部进行排序，并最终用插入排序将局部有序的数组排序。
+希尔排序的思想是使数组中任意间隔为h的元素都是有序的。这样的数组被称为h有序数组。换句话说，一个h有序数组就是h个互相独立的有序数组编织在一起组成的一个数组。
+对于任意以1结尾的h序列，我们都能将数组排序。这就是希尔排序。
+
+h=4
+L  E  E  A  M  H  L  E  P  S  O  L  T  S  X  R
+L———————————M———————————p———————————T
+   E———————————H———————————S———————————S
+      E———————————L———————————O———————————X
+         A———————————E———————————L———————————R
+ 注：一个h有序数组即一个由h个子数组组成的数组
+
+ 实现希尔排序的一种方法是对于每个h，用插入排序将h个子数组独立的排序。限制：但因为子数组是相互独立的，一个更简单的方法是在h-子数组中将每个元素交换到比它大的元素之前去（将比它大的元素向右移动一格）。只需要在插入排序的代码中将移动元素的距离由1改为h即可。
+ 实现：
+</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Shell</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">   <span class="comment">//将a[]按升序排序</span></span><br><span class="line">   <span class="keyword">int</span> N=a.length;</span><br><span class="line">   <span class="keyword">int</span> h=<span class="number">1</span>;</span><br><span class="line">   <span class="keyword">while</span>(h&lt;N/<span class="number">3</span>)&#123;</span><br><span class="line">    h=<span class="number">3</span>*h+<span class="number">1</span> <span class="comment">//1,4,13,40,121,364...</span></span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">while</span>(h&gt;<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="comment">//将数组变为h有序</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=h;i&lt;N;i++)&#123;</span><br><span class="line">     <span class="comment">//将a[i]插入到a[i-h],a[i-2*h],a[i-3*h]...之中</span></span><br><span class="line">     <span class="keyword">for</span>(<span class="keyword">int</span> j=i;j&gt;=h&amp;&amp;less(a[j],a[j-h]);j-=h)&#123;</span><br><span class="line">         exch(a,j,j-h);</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     h=h/<span class="number">3</span>;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>    结果：
+    输入： S  H  E  L  L  S  O  R  T  E  X  A  M  P  L  E
+ 13-sort:  P  H  E  L  L  S  O  R  T  E  X  A  M  S  L  E
+  4-sort:  L           M           T           S
+              E           H           S           S
+                 E            L          O           X          
+                    A           E           L           R
+           L  E  E  A  M  H  L  E  T  S  O  L  S  S  X  R
+ 1-sort:   A  E  E  E  H  L  L  L  M  O  P  R  S  S  T  X
+     注：希尔排序的轨迹（每遍排序后的数组内容）
+
+
+和选择排序以及插入排序形成对比的是，希尔排序也可以用于大型数组。它对任意排序（不一定是随机的）的数组表现也很好。希尔排序的轨迹如图：
+</code></pre><p>图2.1.3 希尔排序的详细轨迹</p>
+<p>　　　　　　　　　希尔排序的可视轨迹</p>
+<pre><code>希尔排序的特点：使用递增排序1,4,13,40,121,364...的希尔排序所需要的比较次数不会超过N的若干倍乘以递增序列的长度。
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/19/base-sort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -531,7 +690,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
