@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="title: 单例模式 categories: []categories:  java 设计模式   1.单例模式的定义单例模式确保某个类只有一个实例，而且自行实例化提供这个实例。 2.单例模式的特点 单例类只能有一个实例 单例类必须自己创建自己唯一的实例 单例类必须给其他所有对象提供这一实例  3.单例模式的分类主要：  饿汉式：线程安全，调用频率高，不能延时加载。 懒汉式：非线程安全，调用频">
+<meta name="description" content="categories:  java 设计模式   1.单例模式的定义单例模式确保某个类只有一个实例，而且自行实例化提供这个实例。 2.单例模式的特点 单例类只能有一个实例 单例类必须自己创建自己唯一的实例 单例类必须给其他所有对象提供这一实例  3.单例模式的分类主要：  饿汉式：线程安全，调用频率高，不能延时加载。 懒汉式：非线程安全，调用频率高，可以延时加载。其他： 双重检测锁式：由jvm底层">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Welcome to Kirito‘s blog！！">
+<meta property="og:title" content="单例模式">
 <meta property="og:url" content="http://yoursite.com/2019/03/20/single/index.html">
 <meta property="og:site_name" content="Welcome to Kirito‘s blog！！">
-<meta property="og:description" content="title: 单例模式 categories: []categories:  java 设计模式   1.单例模式的定义单例模式确保某个类只有一个实例，而且自行实例化提供这个实例。 2.单例模式的特点 单例类只能有一个实例 单例类必须自己创建自己唯一的实例 单例类必须给其他所有对象提供这一实例  3.单例模式的分类主要：  饿汉式：线程安全，调用频率高，不能延时加载。 懒汉式：非线程安全，调用频">
+<meta property="og:description" content="categories:  java 设计模式   1.单例模式的定义单例模式确保某个类只有一个实例，而且自行实例化提供这个实例。 2.单例模式的特点 单例类只能有一个实例 单例类必须自己创建自己唯一的实例 单例类必须给其他所有对象提供这一实例  3.单例模式的分类主要：  饿汉式：线程安全，调用频率高，不能延时加载。 懒汉式：非线程安全，调用频率高，可以延时加载。其他： 双重检测锁式：由jvm底层">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/03/algImages/single.png">
-<meta property="og:updated_time" content="2019-03-20T11:50:33.067Z">
+<meta property="og:updated_time" content="2019-03-20T11:56:32.861Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome to Kirito‘s blog！！">
-<meta name="twitter:description" content="title: 单例模式 categories: []categories:  java 设计模式   1.单例模式的定义单例模式确保某个类只有一个实例，而且自行实例化提供这个实例。 2.单例模式的特点 单例类只能有一个实例 单例类必须自己创建自己唯一的实例 单例类必须给其他所有对象提供这一实例  3.单例模式的分类主要：  饿汉式：线程安全，调用频率高，不能延时加载。 懒汉式：非线程安全，调用频">
+<meta name="twitter:title" content="单例模式">
+<meta name="twitter:description" content="categories:  java 设计模式   1.单例模式的定义单例模式确保某个类只有一个实例，而且自行实例化提供这个实例。 2.单例模式的特点 单例类只能有一个实例 单例类必须自己创建自己唯一的实例 单例类必须给其他所有对象提供这一实例  3.单例模式的分类主要：  饿汉式：线程安全，调用频率高，不能延时加载。 懒汉式：非线程安全，调用频率高，可以延时加载。其他： 双重检测锁式：由jvm底层">
 <meta name="twitter:image" content="http://yoursite.com/2019/03/algImages/single.png">
 
 
@@ -127,7 +127,7 @@
 
 
 
-  <title> | Welcome to Kirito‘s blog！！</title>
+  <title>单例模式 | Welcome to Kirito‘s blog！！</title>
   
 
 
@@ -251,7 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">单例模式</h1>
         
 
         <div class="post-meta">
@@ -301,9 +301,7 @@
       
 
       
-        <hr>
-<p>title: 单例模式</p>
-<h2 id="categories"><a href="#categories" class="headerlink" title="categories: []"></a>categories: []</h2><p>categories:</p>
+        <p>categories:</p>
 <ul>
 <li>java</li>
 <li>设计模式</li>
@@ -508,7 +506,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#categories"><span class="nav-number">1.</span> <span class="nav-text">categories: []</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-单例模式的定义"><span class="nav-number">2.</span> <span class="nav-text">1.单例模式的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-单例模式的特点"><span class="nav-number">3.</span> <span class="nav-text">2.单例模式的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-单例模式的分类"><span class="nav-number">4.</span> <span class="nav-text">3.单例模式的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-单例模式经常用的场景"><span class="nav-number">5.</span> <span class="nav-text">4.单例模式经常用的场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-实现"><span class="nav-number">6.</span> <span class="nav-text">5.实现</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-单例模式的定义"><span class="nav-number">1.</span> <span class="nav-text">1.单例模式的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-单例模式的特点"><span class="nav-number">2.</span> <span class="nav-text">2.单例模式的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-单例模式的分类"><span class="nav-number">3.</span> <span class="nav-text">3.单例模式的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-单例模式经常用的场景"><span class="nav-number">4.</span> <span class="nav-text">4.单例模式经常用的场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-实现"><span class="nav-number">5.</span> <span class="nav-text">5.实现</span></a></li></ol></div>
             
 
           </div>
