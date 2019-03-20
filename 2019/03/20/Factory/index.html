@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="categories:  java 设计模式    java面向对象的六大原则：首先，在谈及设计模式时，我们应该谈一谈面向对象的六大原则： 1.单一责任链原则–做好自己分内之事在代码界：单一责任原则（SRP）：一个类只负责一个功能领域中的相应责任 ，或者可以定义为：就一个类而言，应该只有一个引起它变化的原因。它具 有高内聚，低耦合。 2.开闭原则–对扩展开发，对修改关闭  开闭原则（OCP）：一个">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/03/18/hello-world/index.html">
+<meta property="og:title" content="工厂模式">
+<meta property="og:url" content="http://yoursite.com/2019/03/20/Factory/index.html">
 <meta property="og:site_name" content="Welcome to Kirito‘s blog！！">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="categories:  java 设计模式    java面向对象的六大原则：首先，在谈及设计模式时，我们应该谈一谈面向对象的六大原则： 1.单一责任链原则–做好自己分内之事在代码界：单一责任原则（SRP）：一个类只负责一个功能领域中的相应责任 ，或者可以定义为：就一个类而言，应该只有一个引起它变化的原因。它具 有高内聚，低耦合。 2.开闭原则–对扩展开发，对修改关闭  开闭原则（OCP）：一个">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-19T14:22:31.479Z">
+<meta property="og:updated_time" content="2019-03-20T00:31:38.621Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="工厂模式">
+<meta name="twitter:description" content="categories:  java 设计模式    java面向对象的六大原则：首先，在谈及设计模式时，我们应该谈一谈面向对象的六大原则： 1.单一责任链原则–做好自己分内之事在代码界：单一责任原则（SRP）：一个类只负责一个功能领域中的相应责任 ，或者可以定义为：就一个类而言，应该只有一个引起它变化的原因。它具 有高内聚，低耦合。 2.开闭原则–对扩展开发，对修改关闭  开闭原则（OCP）：一个">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/18/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/20/Factory/">
 
 
 
 
 
-  <title>Hello World | Welcome to Kirito‘s blog！！</title>
+  <title>工厂模式 | Welcome to Kirito‘s blog！！</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/18/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/20/Factory/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kirito">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">工厂模式</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-18T21:35:47+08:00">
-                2019-03-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-20T08:30:04+08:00">
+                2019-03-20
               </time>
             
 
@@ -299,15 +299,39 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>categories:</p>
+<ul>
+<li>java</li>
+<li>设计模式</li>
+</ul>
+<hr>
+<hr>
+<h2 id="java面向对象的六大原则："><a href="#java面向对象的六大原则：" class="headerlink" title="java面向对象的六大原则："></a>java面向对象的六大原则：</h2><pre><code>首先，在谈及设计模式时，我们应该谈一谈面向对象的六大原则：
+</code></pre><h2 id="1-单一责任链原则–做好自己分内之事"><a href="#1-单一责任链原则–做好自己分内之事" class="headerlink" title="1.单一责任链原则–做好自己分内之事"></a>1.单一责任链原则–做好自己分内之事</h2><pre><code>在代码界：单一责任原则（SRP）：一个类只负责一个功能领域中的相应责任
+，或者可以定义为：就一个类而言，应该只有一个引起它变化的原因。它具
+有高内聚，低耦合。
+</code></pre><h2 id="2-开闭原则–对扩展开发，对修改关闭"><a href="#2-开闭原则–对扩展开发，对修改关闭" class="headerlink" title="2.开闭原则–对扩展开发，对修改关闭"></a>2.开闭原则–对扩展开发，对修改关闭</h2><pre><code>  开闭原则（OCP）：一个软件实体应当对扩展开放（添加新的功能或行为）
+对修改关闭。即软件实体应尽量在不修改原有代码的情况下进行扩展。
+  也就是说，我们在维护和升级项目的时候，要尽量不去修改已经写好的代码除非是（bug）。通过继承或别的方法去新增功能。
+</code></pre><h2 id="3-里氏替换原则–有其父必有其子，有其子必有其父"><a href="#3-里氏替换原则–有其父必有其子，有其子必有其父" class="headerlink" title="3.里氏替换原则–有其父必有其子，有其子必有其父"></a>3.里氏替换原则–有其父必有其子，有其子必有其父</h2><pre><code>里氏替换原则（LSP）：所有引用基类（父类）的地方必须能透明地使用
+其子类的对象。也就是说，在软件中将一个基类对象替换成它的子类对象
+程序将不会报任何错误或者异常，反过来不成立。
+</code></pre><h2 id="4-依赖倒转原则–针对接口设计"><a href="#4-依赖倒转原则–针对接口设计" class="headerlink" title="4.依赖倒转原则–针对接口设计"></a>4.依赖倒转原则–针对接口设计</h2><pre><code>依赖倒转原则（DIP）：抽象不应该依赖于细节，细节应该依赖于抽象。
+换而言之，要针对接口编程，而不是针对实现编程。
+</code></pre><h2 id="5-接口隔离原则–细化接口职责，留纯除杂"><a href="#5-接口隔离原则–细化接口职责，留纯除杂" class="headerlink" title="5.接口隔离原则–细化接口职责，留纯除杂"></a>5.接口隔离原则–细化接口职责，留纯除杂</h2><pre><code>接口隔离原则（ISP）：应该使用多个专门的接口，而不是依赖于单一的总
+接口。即 客户端不应该依赖那些它不需要的接口。这个原则和单一原则很
+相似。不同的地方就是一个针对类，一个针对接口。
+</code></pre><h2 id="6-迪米特法则–不要和陌生人说话"><a href="#6-迪米特法则–不要和陌生人说话" class="headerlink" title="6.迪米特法则–不要和陌生人说话"></a>6.迪米特法则–不要和陌生人说话</h2><pre><code>迪米特法则（LoD）：一个软件实体应该尽可能少地与其他实体发生相互
+作用。
+迪米特法则还有几种定义形式：包括不要和“陌生人”说话，只与你的直接
+“朋友”通信等。在迪米特法则中，对于一个对象，其朋友包括：
+</code></pre><ul>
+<li>当前对象本身（this）</li>
+<li>以参数形式传入到当前对象方法中的对象</li>
+<li>当前对象的成员对象</li>
+<li>如果当前对象的成员对象是一个集合，那么集合中的元素也都是朋友</li>
+<li>当前对象创建的对象。</li>
+</ul>
 
       
     </div>
@@ -332,15 +356,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/03/19/shell-sort/" rel="next" title="希尔排序">
+                <i class="fa fa-chevron-left"></i> 希尔排序
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/19/base-sort/" rel="prev" title="初级排序">
-                初级排序 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -454,7 +478,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#java面向对象的六大原则："><span class="nav-number">1.</span> <span class="nav-text">java面向对象的六大原则：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-单一责任链原则–做好自己分内之事"><span class="nav-number">2.</span> <span class="nav-text">1.单一责任链原则–做好自己分内之事</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-开闭原则–对扩展开发，对修改关闭"><span class="nav-number">3.</span> <span class="nav-text">2.开闭原则–对扩展开发，对修改关闭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-里氏替换原则–有其父必有其子，有其子必有其父"><span class="nav-number">4.</span> <span class="nav-text">3.里氏替换原则–有其父必有其子，有其子必有其父</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-依赖倒转原则–针对接口设计"><span class="nav-number">5.</span> <span class="nav-text">4.依赖倒转原则–针对接口设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-接口隔离原则–细化接口职责，留纯除杂"><span class="nav-number">6.</span> <span class="nav-text">5.接口隔离原则–细化接口职责，留纯除杂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-迪米特法则–不要和陌生人说话"><span class="nav-number">7.</span> <span class="nav-text">6.迪米特法则–不要和陌生人说话</span></a></li></ol></div>
             
 
           </div>
